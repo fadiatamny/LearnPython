@@ -19,10 +19,6 @@ class Student():
         return numerator/denominator
 
 
-def studentAvg(student):
-    return student.avg()
-
-
 if __name__ == "__main__":
     marks = {
         'magic': (7, 100),
@@ -33,5 +29,5 @@ if __name__ == "__main__":
         'mindControl': (5, 100)
     }
 
-    student = Student(666,'John','Constantine', marks)
-    print("The average is {0:.3f}".format(studentAvg(student)))
+    student = Student(666, 'John', 'Constantine', marks)
+    print("The average is {0:.3f}".format(student.avg()))

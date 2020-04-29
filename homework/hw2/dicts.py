@@ -1,3 +1,14 @@
+#Email: fadiatamny@gmail.com
+# Students:
+# Fadi Atamany, 206793275
+# Annieli siegel, 302262720
+
+# Write a function that calculates the average of a student given in a dict format.
+# Write code to show how the function works.
+
+# calculates the avg of a sutdent given a student in a dict format.
+
+
 def avg(student):
     numerator = 0
     denominator = 0

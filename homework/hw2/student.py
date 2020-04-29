@@ -1,3 +1,12 @@
+#Email: fadiatamny@gmail.com
+# Students:
+# Fadi Atamany, 206793275
+# Annieli siegel, 302262720
+
+# Build a class that defines a student and it contains a method to calculate the average of a student.
+# Write code to show how the function works.
+
+
 class Student():
     def __init__(self, id, firstName, lastName, marks):
         self._id = id
@@ -5,6 +14,7 @@ class Student():
         self._lastName = lastName
         self._marks = marks
 
+    # function that calculates the average of a student
     def avg(self):
         numerator = 0
         denominator = 0

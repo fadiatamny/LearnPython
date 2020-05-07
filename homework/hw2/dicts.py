@@ -9,11 +9,12 @@
 # calculates the avg of a sutdent given a student in a dict format.
 
 
-def avg(studentMarks: dict) -> float:
+def avg(student: dict) -> float:
     numerator: int = 0
     denominator: int = 0
+    marks: dict = student["marks"]
 
-    for points, mark in studentMarks.values():
+    for points, mark in marks.values():
         numerator += (points * mark)
         denominator += points
 
@@ -40,6 +41,6 @@ if __name__ == "__main__":
         }
     }
 
-    studentAvg: float = avg(student['marks'])
+    studentAvg: float = avg(student)
     print('The average is {0:.3f}'.format(studentAvg)
           if studentAvg != -1 else 'MathError: Dividing by 0')

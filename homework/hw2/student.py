@@ -8,7 +8,7 @@
 
 
 class Student():
-    def __init__(self, id, firstName, lastName, marks):
+    def __init__(self, id: int, firstName: str, lastName: str, marks: dict) -> None:
         self.__id: int = id
         self.__firstName: str = firstName
         self.__lastName: str = lastName

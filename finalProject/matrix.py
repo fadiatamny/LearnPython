@@ -1,4 +1,3 @@
-
 import pandas as pd
 import os.path as path
 
@@ -21,7 +20,7 @@ class Matrix:
 
         self.data = pd.read_json(fileName)
 
-    def __find(self, propertyname: str):
+    def __getProperty(self, propertyname: str):
         if not propertyname in self.data.columns:
             raise MatrixException('Property doesnt exist in the data.')
         if not pd.api.types.is_numeric_dtype(self.data[propertyname]):
@@ -30,17 +29,17 @@ class Matrix:
         return self.data[propertyname]
 
     def average(self, propertyname: str) -> float:
-        res = self.__find(propertyname)
+        res = self.__getProperty(propertyname)
         return res.mean()
 
     def max(self, propertyname: str) -> int:
-        res = self.__find(propertyname)
+        res = self.__getProperty(propertyname)
         return res.max()
 
     def min(self, propertyname: str) -> int:
-        res = self.__find(propertyname)
+        res = self.__getProperty(propertyname)
         return res.min()
 
     def total(self, propertyname: str) -> int:
-        res = self.__find(propertyname)
+        res = self.__getProperty(propertyname)
         return res.sum()
